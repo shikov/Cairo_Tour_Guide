@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Cairo Tour Guide</string>
+    <string name="monuments">Monuments</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="hotels">Hotels</string>
+    <string name="ministries">Ministries</string>
+    <string name="address">Address:</string>
+    <string name="telephone">Telephone:</string>
+    <string name="attraction_image">attraction image</string>
 </resources>

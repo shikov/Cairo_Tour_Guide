@@ -6,6 +6,9 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,11 +59,15 @@ public class CategoryFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_category, container, false);
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView textViewCounter = view.findViewById(R.id.tv_counter);
-        textViewCounter.setText("Fragment No " + (mIndex+1));
+
+        RecyclerView attractionListView = view.findViewById(R.id.attraction_list);
+        attractionListView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        attractionListView.setAdapter(
+                new AttractionListAdapter(Attraction.getAttractionList(mIndex)));
+        attractionListView.addItemDecoration(
+                new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
     }
 }
