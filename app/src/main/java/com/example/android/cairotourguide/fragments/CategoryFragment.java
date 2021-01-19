@@ -1,6 +1,5 @@
-package com.example.android.cairotourguide;
+package com.example.android.cairotourguide.fragments;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import com.example.android.cairotourguide.Attraction;
+import com.example.android.cairotourguide.R;
+import com.example.android.cairotourguide.adapters.AttractionListAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,7 +68,7 @@ public class CategoryFragment extends Fragment {
         RecyclerView attractionListView = view.findViewById(R.id.attraction_list);
         attractionListView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         attractionListView.setAdapter(
-                new AttractionListAdapter(Attraction.getAttractionList(mIndex)));
+                new AttractionListAdapter(Attraction.getAttractionList(mIndex, getContext())));
         attractionListView.addItemDecoration(
                 new DividerItemDecoration(view.getContext(), DividerItemDecoration.VERTICAL));
     }

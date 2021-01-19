@@ -1,4 +1,4 @@
-package com.example.android.cairotourguide;
+package com.example.android.cairotourguide.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.android.cairotourguide.Attraction;
+import com.example.android.cairotourguide.R;
 
 public class AttractionListAdapter extends RecyclerView.Adapter<AttractionListAdapter.AttractionViewHolder> {
 
@@ -56,10 +59,10 @@ public class AttractionListAdapter extends RecyclerView.Adapter<AttractionListAd
 
     static class AttractionViewHolder extends RecyclerView.ViewHolder {
 
-        TextView attractionTitleView;
-        LinearLayout attractionAddressGroupView;
-        LinearLayout attractionTelephoneGroupView;
-        ImageView attractionImageView;
+        final TextView attractionTitleView;
+        final LinearLayout attractionAddressGroupView;
+        final LinearLayout attractionTelephoneGroupView;
+        final ImageView attractionImageView;
 
         public AttractionViewHolder(@NonNull View itemView) {
             super(itemView);

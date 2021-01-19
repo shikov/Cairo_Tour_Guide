@@ -1,5 +1,7 @@
 package com.example.android.cairotourguide;
 
+import android.content.Context;
+
 public class Attraction {
     private final String mTitle;
     private final String mTelephone;
@@ -31,51 +33,67 @@ public class Attraction {
 
     // static variables & functions
 
-    public static Attraction[] getAttractionList(int index) {
+    public static Attraction[] getAttractionList(int index, Context context) {
         switch (index) {
             case 0:
                 return new Attraction[]{
-                        new Attraction("Pyramids of Giza", null,
-                                "Al-Ahram Street, Giza", R.drawable.pyramids),
-                        new Attraction("The Egyptian Museum", null,
-                                "Midan al-Tahrir, Downtown", R.drawable.egyptian_museum),
-                        new Attraction("Nilometer", null,
-                                "2 Abd El-Malek Ln, Giza Governorate", R.drawable.nilometer),
-                        new Attraction("The Citadel", null,
-                                "Off Midan Salah-ad-Din, Islamic Cairo District", R.drawable.the_citadel),
+                        new Attraction(context.getString(R.string.attraction_1_title), null,
+                                context.getString(R.string.attraction_1_address),
+                                R.drawable.pyramids),
+                        new Attraction(context.getString(R.string.attraction_2_title), null,
+                                context.getString(R.string.attraction_2_address),
+                                R.drawable.egyptian_museum),
+                        new Attraction(context.getString(R.string.attraction_3_title), null,
+                                context.getString(R.string.attraction_3_address),
+                                R.drawable.nilometer),
+                        new Attraction(context.getString(R.string.attraction_4_title), null,
+                                context.getString(R.string.attraction_4_address),
+                                R.drawable.the_citadel),
                 };
             case 1:
                 return new Attraction[]{
-                        new Attraction("El Prince", "+20 2 37109292",
-                                "79 Talaat Harb Street, Giza", 0),
-                        new Attraction("Hadramawt Antar", "+20 111 429 2994",
-                                "9 Gamal Abdel Naser, El Herafeen Gesr El Suez", 0),
-                        new Attraction("Koshari Abou Tarek", "+20 2 25775935",
+                        new Attraction(context.getString(R.string.attraction_5_title),
+                                context.getString(R.string.attraction_5_tel),
+                                context.getString(R.string.attraction_5_address), 0),
+                        new Attraction(context.getString(R.string.attraction_6_title),
+                                context.getString(R.string.attraction_6_tel),
+                                context.getString(R.string.attraction_6_address), 0),
+                        new Attraction(context.getString(R.string.attraction_7_title),
+                                context.getString(R.string.attraction_7_tel),
                                 null, 0),
-                        new Attraction("Sobhy Kaber", "+20 101 598 8898",
+                        new Attraction(context.getString(R.string.attraction_8_title),
+                                context.getString(R.string.attraction_8_tel),
                                 null, 0),
                 };
             case 2:
                 return new Attraction[]{
-                        new Attraction("Ramses Hilton", "+20 2 25777444",
-                                "Nile Corniche, Sharkas, Bulaq", 0),
-                        new Attraction("Novotel Cairo El Borg", "+20 2 27356725",
-                                "3 Saraya، Gezira St", 0),
-                        new Attraction("Sofitel Cairo Nile El Gezirah", "+20 2 27373737",
-                                "3 El Thawra Council St Zamalek Downtown, El Orman Giza", 0),
-                        new Attraction("Horizon Nile Plaza Hotel", "+20 128 073 7020",
-                                "67 Abdulaziz Al Saud, Al Manyal Al Gharbi", 0),
+                        new Attraction(context.getString(R.string.attraction_9_title),
+                                context.getString(R.string.attraction_9_tel),
+                                context.getString(R.string.attraction_9_address), 0),
+                        new Attraction(context.getString(R.string.attraction_10_title),
+                                context.getString(R.string.attraction_10_tel),
+                                context.getString(R.string.attraction_10_address), 0),
+                        new Attraction(context.getString(R.string.attraction_11_title),
+                                context.getString(R.string.attraction_11_tel),
+                                context.getString(R.string.attraction_11_address), 0),
+                        new Attraction(context.getString(R.string.attraction_12_title),
+                                context.getString(R.string.attraction_12_tel),
+                                context.getString(R.string.attraction_12_address), 0),
                 };
             case 3:
                 return new Attraction[]{
-                        new Attraction("Ministry of Foreign Affairs", "+20 2 25796334",
-                                "Masbero-Kornish El Nile St.Cairo", 0),
-                        new Attraction("Ministry of Tourism and Antiquities", "+20 2 27358761",
-                                "3 al adel abu bakr st. el zamalek", 0),
-                        new Attraction("Ministry of Interior", "+20 2 24060788",
-                                "New Cairo, Police Academy, Gate no. 2", 0),
-                        new Attraction("Ministry of Health and Population", "+20 2 27943462",
-                                "3 Magless El Shaab st", 0),
+                        new Attraction(context.getString(R.string.attraction_13_title),
+                                context.getString(R.string.attraction_13_tel),
+                                context.getString(R.string.attraction_13_address), 0),
+                        new Attraction(context.getString(R.string.attraction_14_title),
+                                context.getString(R.string.attraction_14_tel),
+                                context.getString(R.string.attraction_14_address), 0),
+                        new Attraction(context.getString(R.string.attraction_15_title),
+                                context.getString(R.string.attraction_15_tel),
+                                context.getString(R.string.attraction_15_address), 0),
+                        new Attraction(context.getString(R.string.attraction_16_title),
+                                context.getString(R.string.attraction_16_tel),
+                                context.getString(R.string.attraction_16_address), 0),
                 };
             default:
                 return new Attraction[]{};
